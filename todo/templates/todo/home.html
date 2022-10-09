@@ -1,7 +1,7 @@
-{%  extends 'todo/base.html' %}
+{% extends 'todo/base.html' %} 
+
 
 {% block content %}
-
 
 <div>
     <div class="container pt-4">
@@ -11,7 +11,7 @@
                     <h2>Add ToDo</h2>
                 </div>
                 <div class="p-4">
-                    <form action="add/" method="POST">
+                    <form action="/add/" method="POST">
                         {% csrf_token%} {{form.as_p}}
                         <hr>
                         <input type="submit" value="ADD" class="btn btn-success">
@@ -26,7 +26,7 @@
                         <br>
                         <br>
                         <div class="alert alert-danger text-center">
-                            <p class="" style="font-size: 30px;">ToDo List</p>
+                            <p class="" style="font-size: 30px;">ToDo Lists</p>
                         </div>
                         <br>
                         <br>
@@ -45,7 +45,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                {% for todo in todos %}
+                                {% for todo in todos%}
                                 <tr>
                                     <td>{{forloop.counter}}</td>
                                     <td>{{todo.title}}</td>
@@ -94,6 +94,7 @@
             </div>
         </div>
     </div>
+
 
 
 {% endblock content %}

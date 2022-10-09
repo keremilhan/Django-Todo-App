@@ -6,11 +6,12 @@ from django.contrib import messages
 def home(request):
     todos = Todo.objects.all()
     form = TodoForm()
+    
     context = {
         "todos" : todos,
         "form" : form
     }
-    return render(request, 'todo/home.html',context)
+    return render(request, "todo/home.html", context)
 
 def todo_create(request):
     form = TodoForm()
