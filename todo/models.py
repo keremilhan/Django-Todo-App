@@ -18,8 +18,8 @@ priority_choices = [
 class Todo(models.Model):
     title = models.CharField(max_length=70)
     description = models.TextField()
-    status = models.CharField(max_length=2, choices=status_choices)
-    priority = models.CharField(max_length=2, choices=priority_choices)
+    status = models.CharField(max_length=2, choices=status_choices, default="I")
+    priority = models.CharField(max_length=2, choices=priority_choices, default=3)
     created_date = models.DateTimeField(auto_now_add=True)
     updated_date = models.DateTimeField(auto_now=True)
 

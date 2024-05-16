@@ -1,15 +1,36 @@
 {% extends 'todo/base.html' %}
 
-
-
 {% block content %}
-    <h2>Todo Update</h2>
+<div>
+    <div class="container-fluid mt-5 border p-4">
+        <h2>Todo Update</h2>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                {{ form.title.label_tag }}
+                {{ form.title }}
+            </div>
+            <div class="form-group">
+                <div class="mb-2">
+                    {{ form.description.label_tag }}
+                </div>
+                {{ form.description }}
+            </div>
+            <div class="form-group">
+                {{ form.status.label_tag }}
+                {{ form.status }}
+            </div>
+            <div class="form-group">
+                {{ form.priority.label_tag }}
+                {{ form.priority }}
+            </div>
+            <input type="submit" value="UPDATE" class="btn btn-primary mt-2 ">
+        </form>
+        <a href="{{ request.META.HTTP_REFERER }}" class="btn btn-secondary mt-2">Back</a>
+    </div>
+</div>
 
-    <form action="" method="POST">
-        {% csrf_token %}
-        {{form.as_p}}
-        <input type="submit" value="UPDATE">
-    </form>
+
 
 {% endblock content %}
     
