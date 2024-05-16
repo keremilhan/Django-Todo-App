@@ -16,10 +16,12 @@
     <nav class="navbar navbar-expand-lg navbar navbar-dark ">
         <div class="container-fluid ">
             <a class="navbar-brand" href="/">
-            <img src="{% static 'todo/images/cw_logo.png' %}" alt="Hi!" width="45" height="45">
-            Clarusway Todo App</a>
+                <img src="{% static 'todo/images/logo.png' %}" alt="Hi!" width="45" height="45">
+            Todo App</a>
         </div>
     </nav>
+    <main>
+
 
     {% if messages %} 
         {% for message in messages %} 
@@ -35,6 +37,8 @@
     {% block content %}
         
     {% endblock content %}
+    </main>
+
         <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <script src="{% static 'todo/js/timeout.js' %}"></script>

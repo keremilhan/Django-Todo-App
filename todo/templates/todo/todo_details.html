@@ -1,0 +1,45 @@
+{% extends 'todo/base.html' %}
+
+
+
+{% block content %}
+<div class="container-fluid pt-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card">
+                <div class="card-body w-20">
+                    <h5 class="card-title text-center fs-1">{{ todo.title }}</h5>
+                    <p class="card-text"><strong>Description:</strong> {{ todo.description }}</p>
+                    <p class="card-text"><strong>Status:</strong> 
+                        {% if todo.status == 'C' %}
+                            Completed
+                        {% elif todo.status == 'I' %}
+                            In-Progress
+                        {% elif todo.status == 'P' %}
+                            Pending
+                        {% endif %}
+                    </p>
+                    <p class="card-text"><strong>Priority:</strong> 
+                        {% if todo.priority == '1' %}
+                            1️⃣
+                        {% elif todo.priority == '2' %}
+                            2️⃣
+                        {% elif todo.priority == '3' %}
+                            3️⃣
+                        {% elif todo.priority == '4' %}
+                            4️⃣
+                        {% elif todo.priority == '5' %}
+                            5️⃣
+                        {% endif %}
+                    </p>
+                    <p class="card-text"><strong>Created Date:</strong> {{ todo.created_date }}</p>
+                    <p class="card-text"><strong>Updated Date:</strong> {{ todo.updated_date }}</p>
+                    <a href="{{ request.META.HTTP_REFERER }}" class="btn btn-secondary">Back</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+    

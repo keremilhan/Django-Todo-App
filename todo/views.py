@@ -54,3 +54,12 @@ def todo_delete(request,id):
     }
 
     return render(request, 'todo/todo_delete.html', context)
+
+def todo_details(request,id):
+    todo = Todo.objects.get(id=id)
+   
+    context= {
+        "todo" : todo
+    }
+
+    return render(request, 'todo/todo_details.html', context)
