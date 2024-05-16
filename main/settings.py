@@ -26,7 +26,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://keremilhan-django-todo-app.herokuapp.com/']
+ALLOWED_HOSTS = ['https://django-todo-app-zsqb.onrender.com']
 
 
 # Application definition
