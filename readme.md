@@ -15,7 +15,7 @@
 
 ## Overview
 
-![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
+<img width="1705" alt="django-todo-app" src="https://github.com/keremilhan/Django-Todo-App/assets/99633775/3b216b1e-8ce3-4115-b302-084f778a0aeb">
 
 ### Built With
 
