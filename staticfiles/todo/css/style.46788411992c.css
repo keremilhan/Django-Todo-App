@@ -35,6 +35,18 @@ main {
   transform: translateX(-50%);
   height: fit-content;
   padding: 10px 0;
+}
+
+#warning {
+  background-color: lightcoral;
+  color: aliceblue;
+  margin: auto;
+  width: 40%;
+  text-align: center;
+}
+#success {
+  background-color: darkseagreen;
+  color: white;
   margin: auto;
   width: 40%;
   text-align: center;

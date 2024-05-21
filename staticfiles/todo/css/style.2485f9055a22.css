@@ -34,7 +34,16 @@ main {
   left: 50%;
   transform: translateX(-50%);
   height: fit-content;
-  padding: 10px 0;
+}
+
+#warning {
+  color: aliceblue;
+  margin: auto;
+  width: 40%;
+  text-align: center;
+}
+#success {
+  color: white;
   margin: auto;
   width: 40%;
   text-align: center;
