@@ -35,18 +35,6 @@ main {
   transform: translateX(-50%);
   height: fit-content;
   padding: 10px 0;
-}
-
-#warning {
-  background-color: lightcoral;
-  color: aliceblue;
-  margin: auto;
-  width: 40%;
-  text-align: center;
-}
-#success {
-  background-color: darkseagreen;
-  color: white;
   margin: auto;
   width: 40%;
   text-align: center;
@@ -58,4 +46,36 @@ textarea {
 
 table td, table tr {
   text-align: center;
+}
+
+.profile-pic-container {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+}
+
+.edit-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+    color: white;
+    font-size: 30px;
+}
+
+.profile-pic-container:hover .edit-icon {
+    display: block;
+}
+
+.profile-pic-container:hover .profile-pic {
+    filter: brightness(30%); /* Apply a slight gray-out effect */
+}
+
+.btn:disabled {
+    background-color: #ccc;
+    border-color: #ccc;
+    color: black;
+    cursor: not-allowed;
+    pointer-events: none;
 }
